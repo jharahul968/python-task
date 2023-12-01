@@ -1,0 +1,28 @@
+Task: Develop a Python-based Data Processing Tool
+Objective:
+Create a Python script or application that reads data from a source (like a file or API), processes it according to specific criteria, and outputs the results.
+Requirements:
+Data Source
+The script should read data from a CSV file or an external API. If using an API, consider publicly available APIs like REST countries, OpenWeatherMap, etc.
+Data Processing:
+Implement one or more data processing functions. This could include filtering data, sorting, aggregating, or transforming data.
+For example, if using a weather API, the script could calculate the average temperature of a specified location over a week.
+Output:
+The script should output the processed data to the console or save it to a file (like a new CSV file or a JSON file).
+Error Handling:
+The script should gracefully handle common errors such as missing files, API limits, or incorrect data formats.
+Documentation:
+Provide comments within the code for clarity.
+Include a README file with instructions on how to set up and run the script.
+Additional Features (Optional for extra credit):
+Include unit tests for your code.
+Allow user input or command-line arguments to specify data sources or processing parameters.
+Visualize the data using a library like Matplotlib or Plotly.
+Deliverables:
+The complete source code.
+A README file explaining how to install and run the script, and a brief overview of its functionality.
+Evaluation Criteria:
+Correctness: The script works as intended without errors.
+Code Quality: Code is well-organized, readable, and follows Python best practices.
+Error Handling: The script can handle common failure scenarios gracefully.
+Documentation: Clear code comments and a comprehensive README.
