@@ -149,3 +149,4 @@ if __name__ == '__main__':
         transforming_function=lambda x: x * 9/5 + 32,
         transformed_data='MaxTempFahrenheit')
     save_json(temp_sorted, result_path=RESULT_PATH)
+    print("Program completed successfully.")
