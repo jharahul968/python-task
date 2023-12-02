@@ -9,6 +9,7 @@ Date: 1 December, 2023
 
 import json
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 # Function to convert CSV to JSON
@@ -134,10 +135,12 @@ if __name__ == '__main__':
     RESULT_PATH = 'results/result.json'
     # Convert CSV to JSON
     temp_data = csv_to_json(csv_path=CSV_PATH, json_path=JSON_PATH)
-    # Filter data where MaxTemp is greater than 25
-    temp_gt_25 = filter_data(temp_data, lambda x: x.get('MaxTemp') > 25)
+    # Input the temperature after only which MaxTemp is needed
+    inp_temp=int(input("Enter temperature to filter MaxTemp (8 to 36): "))
+    # Filter data where MaxTemp is greater than inp_temp
+    temp_gt = filter_data(temp_data, lambda x: x.get('MaxTemp') > inp_temp)
     # Sort filtered data based on MaxTemp
-    temp_sorted = sort_data(temp_gt_25, 'MaxTemp')
+    temp_sorted = sort_data(temp_gt, 'MaxTemp')
     # Calculate average MaxTemp
     average_temp = aggregate_data(
         temp_sorted, 'MaxTemp', sum) / len(temp_sorted)
@@ -150,3 +153,16 @@ if __name__ == '__main__':
         transformed_data='MaxTempFahrenheit')
     save_json(temp_sorted, result_path=RESULT_PATH)
     print("Program completed successfully.")
+    # Visualizing time series graph of filtered data
+    temp_list=[]
+    for i in temp_gt:
+        temp_list.append(i['MaxTemp'])
+    time_index=range(1, len(temp_list)+1)
+    plt.figure(figsize=(10, 6))
+    plt.plot(time_index, temp_list, linestyle='-')
+    plt.xlabel('Index')
+    plt.ylabel('Value')
+    plt.title(f'Time Series Plot of Maximum Temperature (Temperature greater than {inp_temp})')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
