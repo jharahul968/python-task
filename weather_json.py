@@ -109,8 +109,8 @@ def transform_data(data, feature, transforming_function, transformed_data):
     - transformed_data (str): Key to store the transformed data.
     """
     try:
-        for i in data:
-            i[transformed_data] = transforming_function(i[feature])
+        for weather in data:
+            weather[transformed_data] = transforming_function(weather[feature])
     except TypeError as e:
         print(f"Error transforming data: {e}")
 

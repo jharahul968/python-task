@@ -13,6 +13,8 @@ Also, for aggregation, average value is calculated.
 
 For transformation, it is simply demonstrated by calculating fahrenheit value of celsius value in max temperature.
 
+Also, this code demonstrates clean coding technique and scores 10/10 in pylint check. All the functions include their docstring and required information.
+
 ## Installation and Usage
 
 1. Cloning the project
@@ -45,4 +47,9 @@ Additional scripts
 4. Testing the code
 ```
     python tests.py
+```
+
+5. Testing script standard using pylint
+```
+   pylint weather_json.py
 ```
