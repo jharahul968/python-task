@@ -30,6 +30,7 @@ Also, this code demonstrates clean coding technique and scores 10/10 in pylint c
    python -m venv venv
 
    source venv/bin/activate (for linux)
+   venv/Scripts/activate (for windows)
 ```
 3. Running the script
 ```
