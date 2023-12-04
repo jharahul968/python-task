@@ -22,6 +22,8 @@ Also, this code demonstrates clean coding technique and scores 10/10 in pylint c
    git clone https://github.com/jharahul968/python-task.git
 
    cd python-task
+
+   pip install -r requirements.txt
 ```
 2. Virtual Environment Setup
 ```
