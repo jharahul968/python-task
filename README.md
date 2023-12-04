@@ -42,7 +42,7 @@ Also, this code demonstrates clean coding technique and scores 10/10 in pylint c
     The final results will be saved in /results/ directory and a time series graph will also show the series of 
 maximum temperature over time.
 
-Additional scripts
+## Additional scripts
 
 4. Testing the code
 ```
